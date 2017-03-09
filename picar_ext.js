@@ -14,9 +14,20 @@
              url: 'http://car.local:5000/_set_servo?t=' + t,
              dataType: 'jsonp',
              success: function( servo_data ) {
-                 // Got the data - parse it and return the temperature
                  throttle = servo_data['t'];
                  callback(throttle);
+             }
+       });
+    };
+
+    ext.set_steering = function(s) {
+
+       $.ajax({
+             url: 'http://car.local:5000/_set_servo?s=' + t,
+             dataType: 'jsonp',
+             success: function( servo_data ) {
+                 steering = servo_data['s'];
+                 callback(steering);
              }
        });
     };
@@ -25,7 +36,8 @@
     var descriptor = {
         blocks: [
           // Block type, block name, function name
-        ['T ', 'Set Throttle %n', 'set_throttle', 330],
+        ['R', 'Set Throttle %n', 'set_throttle', 330],
+        ['R', 'Set Steering %n', 'set_steering', 315],
         ]
     };
 
