@@ -23,7 +23,7 @@
     ext.set_steering = function(s) {
 
        $.ajax({
-             url: 'http://car.local:5000/_set_servo?s=' + t,
+             url: 'http://car.local:5000/_set_servo?s=' + s,
              dataType: 'jsonp',
              success: function( servo_data ) {
                  steering = servo_data['s'];
