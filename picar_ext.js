@@ -36,8 +36,8 @@
     var descriptor = {
         blocks: [
           // Block type, block name, function name
-        ['R', 'Set Throttle %n', 'set_throttle', 330],
-        ['R', 'Set Steering %n', 'set_steering', 315],
+        [' ', 'Set Throttle %n', 'set_throttle', 330],
+        [' ', 'Set Steering %n', 'set_steering', 315],
         ]
     };
 
